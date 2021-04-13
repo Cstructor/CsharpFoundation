@@ -1,0 +1,20 @@
+// File: Char.cs
+using System;
+
+class CharMain
+{
+    static void Main()
+    {
+        char ch = 'A';
+
+        Console.WriteLine(char.IsControl(ch));
+        Console.WriteLine(char.IsDigit(ch));
+        Console.WriteLine(char.IsLetter(ch));
+        Console.WriteLine(char.IsLetterOrDigit(ch));
+        Console.WriteLine(char.IsUpper(ch));
+        Console.WriteLine(char.ToLower(ch));
+        Console.WriteLine(char.ToUpper(ch));
+        Console.WriteLine(char.GetUnicodeCategory(ch));
+    }
+}
+

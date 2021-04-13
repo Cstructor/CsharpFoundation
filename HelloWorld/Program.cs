@@ -1,31 +1,28 @@
-﻿using System;
+﻿// File: Find a typed last name Smith
+using System;
 
-class Program
+class Lastname
 {
     static void Main()
     {
-        while(true)
-        { 
-        // Ask for an input 
-        Console.Write("Please enter an integer value for x: ");
+        while (true)
+        {
+            Console.Write("Enter a person's full name:");
+            string str = Console.ReadLine();
 
-        // Read the input and save it into a String Type
-        string input = Console.ReadLine(); 
+            str = str.ToUpper();
 
-        // Convert the String Type into an Integer Type
-        int x = int.Parse(input);  // convert a string into an integer type
+            if (str.EndsWith(" SMITH"))
+            {
+                Console.WriteLine("You found a Smith!");
+            }
+            else
+            {
+                Console.WriteLine("You didn't find a Smith.");
+            }
 
-        // Calculate the Polynomial (3x^3-5x^2+6) and save it into an Integer Type
-        int result = (3 * x * x * x) - (5 * x * x) + 6;
-
-        // Show the result on the Console (on the screen)
-        Console.WriteLine("The calculated value for 3x^3-5x^2+6 is {0}", result);
-
-        Console.WriteLine(); // an extra line
-
-        // Hold the Console so we can see the result
-        Console.ReadLine();
+            Console.ReadLine();
         }
+                
     }
-
 }
