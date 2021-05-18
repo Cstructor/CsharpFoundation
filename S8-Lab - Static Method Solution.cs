@@ -8,7 +8,7 @@ class Sorter
         {
             for (int inner = index; inner < array.Length; inner++)
             {
-                if (array[index] < array[inner])
+                if (array[index] > array[inner])
                 {
                     Swap(ref array[index], ref array[inner]);
                 }
@@ -22,29 +22,29 @@ class Sorter
         first = second;
         second = temp;
     }
+
+    // TODO: Add static Print function
+    public static void Print(string title, int[] array)
+    {
+        Console.Write(title);
+
+        foreach (var item in array)
+        {
+            Console.Write("{0},", item);
+        }
+        Console.WriteLine();
+    }
 }
 
 class Program
 {
     static void Main()
     {
-        var values = new int[] { 1,2,4, 8, 10 };
+        int[] values = new int[] { 5, 4, 3, 2, 1 };
 
-        Console.Write("Not sorted:");
-        foreach (var item in values)
-        {
-            Console.Write("{0},", item);
-        }
-        Console.WriteLine();
-
+        Sorter.Print("Not sorted: ", values);
         Sorter.BubbleSort(values);
-
-        Console.Write("Sorted:");
-        foreach (var item in values)
-        {
-            Console.Write("{0},", item);
-        }
-        Console.WriteLine();
+        Sorter.Print("Sorted: ", values);
 
         Console.ReadLine();
     }
