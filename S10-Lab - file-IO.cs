@@ -46,7 +46,7 @@ class Inventory
 
     public void SaveFile()
     {
-        // TODO: Recreate the file (File.Create)
+        // TODO: Recreate the file
         FileStream stream = File.Create(FileName);
 
         // TODO: Serialize the items
@@ -91,7 +91,6 @@ class ProjectMain
 
         inventory.Add(1, "Rover");
         inventory.Add(2, "Chippie");
-        
         inventory.SaveFile();
 
         inventory.LoadFile();
@@ -102,3 +101,4 @@ class ProjectMain
 
     } // Main()
 } // class ProjectMain
+
